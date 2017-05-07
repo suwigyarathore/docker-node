@@ -50,9 +50,9 @@ $ npm install express --save
 }
 ```
 
-*Details of Hello World
+*Details of Hello World*
 
-With everything installed, we can create an index.js file with a simple HTTP server that will serve our Hello World website:*
+With everything installed, we can create an index.js file with a simple HTTP server that will serve our Hello World website:
 
 ```
 //Load express module with `require` directive
@@ -77,9 +77,9 @@ $ node index.js
 
 ### Write Dockerfile
 
-## Line 1: Use another Docker image for the template of my image. We shall use the official Node.js image with Node v7.
-## Line 2: Set working dir in the container to /app. We shall use this directory to store files, run npm, and launch our application:
-## Copy application to /app directory and install dependencies. If you add the package.json first and run npm install later, Docker won't have to install the dependencies again if you change the package.json file. This results from the way the Docker image is being built (layers and cache), and this is what we should do:
+1. Line 1: Use another Docker image for the template of my image. We shall use the official Node.js image with Node v7.
+2. Line 2: Set working dir in the container to /app. We shall use this directory to store files, run npm, and launch our application:
+3. Line 3-5: Copy application to /app directory and install dependencies. If you add the package.json first and run npm install later, Docker won't have to install the dependencies again if you change the package.json file. This results from the way the Docker image is being built (layers and cache), and this is what we should do:
 
 ```
 FROM node:7
