@@ -32,7 +32,7 @@ $ npm init
 $ npm install express --save
 ```
 
-The file should look like this now:
+*The file should look like this now:*
 ```
 {
   "name": "helloworld",
@@ -50,9 +50,9 @@ The file should look like this now:
 }
 ```
 
-Details of Hello World
+*Details of Hello World
 
-With everything installed, we can create an index.js file with a simple HTTP server that will serve our Hello World website:
+With everything installed, we can create an index.js file with a simple HTTP server that will serve our Hello World website:*
 
 ```
 //Load express module with `require` directive
@@ -69,7 +69,7 @@ app.listen(8081, function () {
   console.log('app listening on port 8081!')
 })
 ```
-The application is ready to launch:
+*The application is ready to launch:*
 
 ```
 $ node index.js
@@ -77,9 +77,9 @@ $ node index.js
 
 ### Write Dockerfile
 
-##Line 1: Use another Docker image for the template of my image. We shall use the official Node.js image with Node v7.
-##Line 2: Set working dir in the container to /app. We shall use this directory to store files, run npm, and launch our application:
-##Copy application to /app directory and install dependencies. If you add the package.json first and run npm install later, Docker won't have to install the dependencies again if you change the package.json file. This results from the way the Docker image is being built (layers and cache), and this is what we should do:
+## Line 1: Use another Docker image for the template of my image. We shall use the official Node.js image with Node v7.
+## Line 2: Set working dir in the container to /app. We shall use this directory to store files, run npm, and launch our application:
+## Copy application to /app directory and install dependencies. If you add the package.json first and run npm install later, Docker won't have to install the dependencies again if you change the package.json file. This results from the way the Docker image is being built (layers and cache), and this is what we should do:
 
 ```
 FROM node:7
@@ -91,7 +91,7 @@ CMD node index.js
 EXPOSE 8081
 ```
 
-###Build Docker image
+### Build Docker image
 
 With the instructions ready all that remains is to run the docker build command, set the name of our image with -t parameter, and choose the directory with the Dockerfile:
 
@@ -99,7 +99,7 @@ With the instructions ready all that remains is to run the docker build command,
 $ docker build -t hello-world .
 ```
 
-###Run Docker container
+### Run Docker container
 
 The application has been baked into the image. Dinner time! Execute the following string to launch the container and publish it on the host with the same port 8081:
 
